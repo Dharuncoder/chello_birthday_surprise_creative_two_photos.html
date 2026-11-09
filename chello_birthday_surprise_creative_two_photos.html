@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10091b">
+<title>For Chello ✦ A Little Universe</title>
+<style>
+:root{--pink:#ff9fc8;--rose:#e85d9b;--gold:#ffe3a6;--cream:#fff1f7;--muted:#cbb5ca;--glass:#ffffff0d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--cream);font-family:Georgia,"Noto Serif Tamil",serif;background:#10091b;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(ellipse at 50% 0%,#54224e 0%,#21112e 45%,#090711 100%)}
+#stars,#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}#stars{z-index:-2}#fx{z-index:8;overflow:hidden}
+header{position:sticky;top:0;z-index:10;background:#10091bd9;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff12;padding:13px max(16px,calc((100vw - 760px)/2));display:flex;align-items:center;gap:13px;font:10px Arial,sans-serif;letter-spacing:.16em;color:#f4c6dc}
+.brand{white-space:nowrap}.progress{height:4px;flex:1;background:#ffffff20;border-radius:20px;overflow:hidden}.bar{height:100%;width:8.33%;background:linear-gradient(90deg,var(--rose),var(--gold));transition:width .5s}.count{white-space:nowrap}
+main{width:min(850px,100%);margin:auto;padding:30px 17px 70px;min-height:calc(100vh - 100px);display:grid;place-items:center}
+.page{display:none;width:100%;text-align:center;animation:arrive .65s ease both}.page.active{display:block}@keyframes arrive{from{opacity:0;transform:translateY(18px) scale(.985)}to{opacity:1;transform:none}}
+.kicker{font:10px Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--pink)}
+h1{font-size:clamp(3.2rem,12vw,6.8rem);line-height:.98;font-weight:400;margin:20px 0;color:#fff7fb;text-shadow:0 0 35px #ff70ad55}h1 em,h2 em{color:var(--pink);font-style:normal}
+h2{font-size:clamp(2rem,7vw,3.5rem);line-height:1.15;font-weight:400;margin:15px 0 20px}
+p{font-size:clamp(1rem,3vw,1.13rem);line-height:2;color:#e7d3e0;max-width:620px;margin:12px auto}
+.hero-icon{font-size:70px;display:block;margin:20px auto;filter:drop-shadow(0 0 18px #ff88bb77);animation:float 3s ease-in-out infinite}@keyframes float{50%{transform:translateY(-10px) rotate(3deg)}}
+.card{max-width:680px;margin:25px auto;padding:clamp(20px,5vw,38px);border:1px solid #ffadd044;border-radius:25px;background:linear-gradient(145deg,#ffffff12,#ffffff05);box-shadow:0 20px 70px #0006,inset 0 0 30px #ff9bc40b;backdrop-filter:blur(8px)}
+.card p{text-align:left}.signature{text-align:right;color:#ffc0d9;font-style:italic;font-size:1.2rem}
+.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:27px 0 5px}
+button{border:1px solid #ffadd099;color:white;background:linear-gradient(135deg,#dc4c91,#79316f);padding:14px 22px;border-radius:999px;font:11px Arial,sans-serif;letter-spacing:.1em;cursor:pointer;box-shadow:0 8px 25px #d43d7c30;transition:.2s}
+button:hover{transform:translateY(-3px);filter:brightness(1.12)}button.alt{background:#ffffff0c;border-color:#ffffff35;color:#f7d8e7}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:13px;max-width:700px;margin:25px auto}
+.tile{padding:23px 14px;border:1px solid #ffadd044;border-radius:20px;background:linear-gradient(145deg,#3a2040aa,#170f23cc);min-height:130px;display:grid;place-content:center;gap:8px}
+.tile b{font-size:1.1rem;color:#ffe8f2}.tile span{font:11px Arial,sans-serif;color:#d6b9cb;line-height:1.6}
+.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:650px;margin:26px auto}
+.photo{padding:9px 9px 13px;background:linear-gradient(145deg,#fff0f7,#c86a98);border-radius:18px;transform:rotate(-2deg);box-shadow:0 15px 35px #0008;color:#50213d}.photo:nth-child(2){transform:rotate(2deg)}
+.frame{height:clamp(170px,45vw,280px);border-radius:12px;background:#28162c;overflow:hidden;display:grid;place-items:center;color:#f9c8dc;font:12px Arial,sans-serif}.frame img{width:100%;height:100%;object-fit:cover;display:none}
+.photo label{display:block;padding:10px 3px 0;font: bold 10px Arial,sans-serif;letter-spacing:.08em;cursor:pointer}.photo input{display:none}
+.timeline{max-width:530px;text-align:left;margin:28px auto;border-left:1px solid var(--pink);padding-left:23px}.event{position:relative;margin:0 0 24px}.event:before{content:"";position:absolute;left:-28px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 15px var(--pink)}.event b{color:#ffc4dc}.event p{font-size:1rem;margin:4px 0}
+.envelope{width:190px;height:130px;margin:30px auto;position:relative;background:linear-gradient(135deg,#ffb6d3,#d95d98);border-radius:8px;display:grid;place-items:center;cursor:pointer;box-shadow:0 15px 35px #0006;transition:.3s}.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,transparent 49%,#a93b75 50%) left/50% 100% no-repeat,linear-gradient(215deg,transparent 49%,#b8487c 50%) right/50% 100% no-repeat}.envelope span{z-index:1;font-size:40px}
+.revealbox{display:none;max-width:600px;margin:18px auto;padding:23px;border:1px solid #ffadd077;border-radius:20px;background:#2b1734;line-height:2;color:#ffe8f2}
+.choices{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:20px auto}.choices button{min-width:130px}
+footer{text-align:center;color:#a98ca5;font:9px Arial,sans-serif;letter-spacing:.2em;padding:15px}
+.butterfly{position:fixed;left:-10vw;top:var(--y);font-size:var(--s);animation:fly var(--d) linear infinite;animation-delay:var(--delay);filter:drop-shadow(0 0 8px #ff9fc8);opacity:.7;pointer-events:none}
+@keyframes fly{0%{transform:translateX(-10vw) translateY(0) rotate(-15deg)}50%{transform:translateX(55vw) translateY(-30px) rotate(15deg)}100%{transform:translateX(115vw) translateY(10px) rotate(-10deg)}}
+.confetti{position:fixed;top:-20px;animation:fall 3.5s linear forwards;pointer-events:none}@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+.dots{display:flex;justify-content:center;gap:6px;margin-top:25px}.dot{width:6px;height:6px;border-radius:9px;background:#80647e}.dot.on{width:22px;background:var(--pink)}
+.small{font:10px Arial,sans-serif;letter-spacing:.12em;color:#c6a7bb}
+@media(max-width:430px){header{padding:12px}.photo-grid{gap:8px}.photo{padding:7px}.frame{height:175px}.photo label{font-size:9px}}
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas><div id="fx"></div>
+<header><span class="brand">FOR CHELLO ♡</span><div class="progress"><div class="bar" id="bar"></div></div><span class="count" id="count">01 / 12</span></header>
+<main>
+<section class="page active"><div class="kicker">A little universe made just for you</div><span class="hero-icon">🦋</span><h1>Hey,<em> செல்லோ…</em></h1><p>ஒரு சாதாரண website இல்ல… உனக்காக உருவாக்கிய ஒரு சின்ன magical world. ஒவ்வொரு பக்கத்திலும் ஒரு surprise! ✨</p><div class="actions"><button onclick="go(1)">OPEN YOUR SURPRISE ✦</button></div></section>
+<section class="page"><div class="kicker">Chapter 01 · The special day</div><span class="hero-icon">🎂</span><h2>Happy Birthday<br><em>என் செல்லோ!</em></h2><p>இன்றைய நாள் உனக்காக மட்டும். சிரிப்பு, சந்தோஷம், அழகான நினைவுகள் — எல்லாமே உன்னைத் தேடி வரட்டும்! 🌷</p><div class="actions"><button onclick="go(2)">NEXT SURPRISE →</button><button class="alt" onclick="go(0)">← BACK</button></div></section>
+<section class="page">
+<div class="kicker">Chapter 02 · Two sides of beauty</div>
+<h2>Double the <em>beauty</em> ♡</h2>
+<p>ஒரே ஒரு photo போதாது… உன் அழகுக்கு இரண்டு frames கூட கொஞ்சம் தான். ✨</p>
+<div style="position:relative;max-width:680px;margin:30px auto 18px;padding:20px 0 10px">
+  <div style="position:absolute;left:50%;top:48%;width:130px;height:130px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,#ff9fc866,transparent 70%);filter:blur(8px);pointer-events:none"></div>
+  <div class="photo-grid" style="position:relative;align-items:center;gap:18px">
+    <div class="photo" style="transform:rotate(-5deg) translateY(8px);padding:10px;background:linear-gradient(145deg,#fff7fb,#f3a5c6);box-shadow:0 18px 40px #0009,0 0 30px #ff9fc844">
+      <div class="frame" style="border:2px solid #fff"><img id="img1"><span id="ph1">🌸<br>Her beautiful smile</span></div>
+      <label for="f1">✦ ADD PHOTO 01</label>
+      <input id="f1" type="file" accept="image/*" onchange="photo(event,1)">
+    </div>
+    <div class="photo" style="transform:rotate(5deg) translateY(-8px);padding:10px;background:linear-gradient(145deg,#fff7fb,#d77aa7);box-shadow:0 18px 40px #0009,0 0 30px #ffe3a644">
+      <div class="frame" style="border:2px solid #fff"><img id="img2"><span id="ph2">🌙<br>Another pretty moment</span></div>
+      <label for="f2">✦ ADD PHOTO 02</label>
+      <input id="f2" type="file" accept="image/*" onchange="photo(event,2)">
+    </div>
+  </div>
+  <div style="font-size:32px;margin-top:-8px;position:relative;z-index:2">🦋 <span style="color:#ffe3a6">✦</span> 🌸</div>
+</div>
+<div class="card" style="max-width:560px;padding:18px 24px;margin-top:15px">
+  <p style="text-align:center;margin:0;font-size:1.05rem;line-height:1.8">இரண்டு photos… இரண்டு moments…<br><em style="color:var(--pink)">ஆனா இரண்டிலும் ஒரே மாதிரி அழகு. ♡</em></p>
+</div>
+<p class="small">TAP EACH FRAME TO ADD YOUR TWO FAVOURITE PHOTOS</p>
+<div class="actions"><button onclick="go(3)">KEEP GOING →</button><button class="alt" onclick="go(1)">← BACK</button></div>
+</section>
+<section class="page"><div class="kicker">Chapter 03 · A little letter</div><h2>உனக்காக சில <em>வரிகள்…</em></h2><div class="card"><p>அன்பான செல்லோ,</p><p>உன் வாழ்க்கையில் வரும் ஒவ்வொரு நாளும் புதிய நம்பிக்கையையும் அழகான வாய்ப்புகளையும் கொண்டு வரட்டும்.</p><p>நீ நினைக்கும் நல்ல விஷயங்கள் நடக்கட்டும். உன் முயற்சிகள் வெற்றியாகட்டும். உன் முகத்தில் இருக்கும் சிரிப்பு எப்போதும் இப்படியே தொடரட்டும்.</p><p>இந்தச் சின்ன website உனக்கு ஒரு அழகான நினைவாக இருக்கட்டும். 💗</p><div class="signature">With warm wishes ♡</div></div><div class="actions"><button onclick="go(4)">TURN THE PAGE →</button><button class="alt" onclick="go(2)">← BACK</button></div></section>
+<section class="page"><div class="kicker">Chapter 04 · Little things</div><h2>உன்னை special ஆக்கும் <em>விஷயங்கள்</em></h2><div class="grid"><div class="tile"><b>☀️ Your Smile</b><span>ஒரு நாளையே அழகாக்கும் சிரிப்பு</span></div><div class="tile"><b>🌻 Your Kindness</b><span>சின்ன விஷயங்களிலும் தெரியும் நல்ல மனசு</span></div><div class="tile"><b>✨ Your Dreams</b><span>உன்னை முன்னே கொண்டு செல்லும் கனவுகள்</span></div><div class="tile"><b>🦋 Your Vibe</b><span>உனக்கே உரிய அழகான தனித்துவம்</span></div></div><div class="actions"><button onclick="go(5)">NEXT MAGIC →</button><button class="alt" onclick="go(3)">← BACK</button></div></section>
+<section class="page"><div class="kicker">Chapter 05 · A story in moments</div><h2>Little moments, <em>big memories</em></h2><div class="timeline"><div class="event"><b>🌸 The beginning</b><p>ஒரு அழகான நினைவின் முதல் பக்கம்.</p></div><div class="event"><b>✨ The little moments</b><p>சின்ன சின்ன தருணங்கள் தான் பெரிய சந்தோஷம்.</p></div><div class="event"><b>🌙 The memories</b><p>மனசில் எப்போதும் இருக்கும் இனிய நினைவுகள்.</p></div><div class="event"><b>🦋 More chapters</b><p>இன்னும் நிறைய அழகான நாட்கள் காத்திருக்கின்றன.</p></div></div><div class="actions"><button onclick="go(6)">ONE MORE →</button><button class="alt" onclick="go(4)">← BACK</button></div></section>
+<section class="page"><div class="kicker">Chapter 06 · Pick your magic</div><h2>இப்போ உனக்கு என்ன <em>வேண்டும்?</em></h2><p>ஒரு விருப்பத்தைத் தேர்வு செய். உனக்காக ஒரு சின்ன message காத்திருக்கிறது!</p><div class="choices"><button onclick="pick('smile')">😊 A Smile</button><button onclick="pick('luck')">🍀 Good Luck</button><button onclick="pick('dream')">🌠 A Dream</button></div><div class="revealbox" id="pickbox"></div><div class="actions"><button onclick="go(7)">NEXT SURPRISE →</button><button class="alt" onclick="go(5)">← BACK</button></div></section>
+<section class="page"><div class="kicker">Chapter 07 · Open when ready</div><h2>ஒரு secret <em>letter…</em></h2><p>இந்த envelope-ஐ tap பண்ணு. உள்ளே ஒரு சின்ன surprise இருக்கு.</p><div class="envelope" onclick="openLetter()"><span>💌</span></div><div class="revealbox" id="letter">இன்றைய நாளை மட்டும் இல்லாமல், உன் வரப்போகும் நாட்களையும் அழகாக்கும் அளவுக்கு மகிழ்ச்சியும் நம்பிக்கையும் கிடைக்கட்டும். Keep shining, Chello! 🌟</div><div class="actions"><button onclick="go(8)">CONTINUE →</button><button class="alt" onclick="go(6)">← BACK</button></div></section>
+<section class="page"><div class="kicker">Chapter 08 · Wish garden</div><h2>Plant a little <em>wish</em> 🌱</h2><p>உன் மனசில் இருக்கும் ஒரு நல்ல ஆசையை நினைச்சுக்கோ. கீழே உள்ள பூவை tap பண்ணு!</p><div style="font-size:95px;cursor:pointer;filter:drop-shadow(0 0 20px #ff8fbd)" onclick="grow()">🌷</div><div class="revealbox" id="garden">உன் ஆசை அழகான நாளில் நனவாகட்டும்! 🌼</div><div class="actions"><button onclick="go(9)">NEXT PAGE →</button><button class="alt" onclick="go(7)">← BACK</button></div></section>
+<section class="page"><div class="kicker">Chapter 09 · A tiny celebration</div><span class="hero-icon">🎊</span><h2>Ready for a little <em>celebration?</em></h2><p>இந்த button-ஐ அழுத்து. உனக்காக வானம் முழுக்க confetti!</p><div class="actions"><button onclick="party()">MAKE IT RAIN ✨</button><button class="alt" onclick="go(8)">← BACK</button><button onclick="go(10)">NEXT →</button></div></section>
+<section class="page"><div class="kicker">Chapter 10 · Your new chapter</div><h2>உன் புதிய வருடம் <em>அழகாகட்டும்</em></h2><div class="grid"><div class="tile"><b>🌈 Happiness</b><span>ஒவ்வொரு நாளும் சின்ன சந்தோஷம்</span></div><div class="tile"><b>🏆 Success</b><span>உன் உழைப்புக்கு நல்ல வெற்றி</span></div><div class="tile"><b>🕊️ Peace</b><span>மனசுக்கு நிறைவான அமைதி</span></div><div class="tile"><b>💫 Adventures</b><span>புதிய அனுபவங்கள், புதிய கதைகள்</span></div></div><div class="actions"><button onclick="go(11)">FINAL SURPRISE →</button><button class="alt" onclick="go(9)">← BACK</button></div></section>
+<section class="page"><div class="kicker">Chapter 11 · The final little surprise</div><div class="hero-icon">🎂</div><h2>Make a wish,<br><em>செல்லோ!</em></h2><p>ஒரு நிமிஷம் கண்களை மூடி, உனக்குப் பிடித்த ஒரு அழகான ஆசையை நினைச்சுக்கோ…</p><div class="actions"><button onclick="finale()">TAP TO REVEAL ♥</button></div><div class="revealbox" id="final">உன் வாழ்க்கை முழுவதும் அன்பு, அமைதி, வெற்றி, சந்தோஷம் நிறைந்திருக்கட்டும். உன் கனவுகள் ஒவ்வொன்றாக நனவாகட்டும். Happy Birthday, Chello! 💖<div style="font-size:40px;margin-top:12px">🦋 🌸 ✨</div></div><div class="actions"><button class="alt" onclick="go(0)">START AGAIN ↺</button><button class="alt" onclick="go(10)">← READ AGAIN</button></div></section>
+<div class="dots" id="dots"></div>
+</main><footer>MADE WITH ♡ · A LITTLE WORLD FOR CHELLO</footer>
+<script>
+let current=0;const pages=[...document.querySelectorAll('.page')],bar=document.getElementById('bar'),count=document.getElementById('count'),dots=document.getElementById('dots');
+pages.forEach((_,i)=>{let d=document.createElement('i');d.className='dot'+(!i?' on':'');dots.appendChild(d)});
+function go(n){current=Math.max(0,Math.min(pages.length-1,n));pages.forEach((p,i)=>p.classList.toggle('active',i===current));[...dots.children].forEach((d,i)=>d.classList.toggle('on',i===current));bar.style.width=((current+1)/pages.length*100)+'%';count.textContent=String(current+1).padStart(2,'0')+' / '+String(pages.length).padStart(2,'0');window.scrollTo({top:0,behavior:'smooth'})}
+function photo(e,n){let f=e.target.files&&e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{let im=document.getElementById('img'+n);im.src=r.result;im.style.display='block';document.getElementById('ph'+n).style.display='none'};r.readAsDataURL(f)}
+function pick(type){let m={smile:'இன்றைக்கு மட்டுமல்ல, தினமும் சிரிக்க நிறைய காரணங்கள் கிடைக்கட்டும்! 😊',luck:'நீ எடுக்கும் ஒவ்வொரு நல்ல முயற்சிக்கும் அதிர்ஷ்டமும் வெற்றியும் துணையாக இருக்கட்டும்! 🍀',dream:'உன் மனசில் இருக்கும் அழகான கனவுகள் நிஜமாகும் பாதை திறக்கட்டும்! 🌠'};let b=document.getElementById('pickbox');b.textContent=m[type];b.style.display='block'}
+function openLetter(){document.getElementById('letter').style.display='block';party(18)}
+function grow(){document.getElementById('garden').style.display='block';party(12)}
+function party(n=65){for(let i=0;i<n;i++){let e=document.createElement('i');e.className='confetti';e.textContent=['✦','♥','🌸','🦋','✨','•'][i%6];e.style.left=Math.random()*100+'vw';e.style.fontSize=(12+Math.random()*22)+'px';e.style.animationDuration=(2+Math.random()*2)+'s';e.style.animationDelay=Math.random()*.7+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),5000)}}
+function finale(){document.getElementById('final').style.display='block';party(100)}
+const c=document.getElementById('stars'),ctx=c.getContext('2d');let w,h,stars=[];function resize(){w=c.width=innerWidth;h=c.height=innerHeight;stars=Array.from({length:110},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.4+.3,a:Math.random()*6}))}function draw(){ctx.clearRect(0,0,w,h);stars.forEach(s=>{s.a+=.012;ctx.globalAlpha=.2+.6*Math.abs(Math.sin(s.a));ctx.fillStyle='#ffe5f1';ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,7);ctx.fill()});requestAnimationFrame(draw)}addEventListener('resize',resize);resize();draw();
+for(let i=0;i<7;i++){let b=document.createElement('span');b.className='butterfly';b.textContent='🦋';b.style.setProperty('--y',(8+Math.random()*78)+'%');b.style.setProperty('--s',(16+Math.random()*18)+'px');b.style.setProperty('--d',(18+Math.random()*18)+'s');b.style.setProperty('--delay',(-Math.random()*25)+'s');document.body.appendChild(b)}
+</script>
+</body></html>
